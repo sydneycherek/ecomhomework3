@@ -12,6 +12,8 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Type</th>
+      <th>Gender</th>
     </tr>
   </thead>
   <tbody>
@@ -27,7 +29,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT animal_id, animalname, animaltype from Animal";
+$sql = "SELECT animal_id, animalname, animaltype, animalgender from Animal";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,6 +40,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["animal_id"]?></td>
     <td><a href="animal-section.php?id=<?=$row["animal_id"]?>"><?=$row["animalname"]?></a></td>
     <td><?=$row["animaltype"]?></td>
+    <td><?=$row["animalgender"]?></td>
   </tr>
 <?php
   }
