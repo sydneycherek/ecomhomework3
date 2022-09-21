@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["animal_id"]?></td>
-    <td><?=$row["animalname"]?></td>
+    <td><a href="animal-section.php?id=<?=$row["animal_id"]?>"><?=$row["animalname"]?></a></td>
     <td><?=$row["animaltype"]?></td>
   </tr>
 <?php
