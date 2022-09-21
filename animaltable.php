@@ -14,6 +14,7 @@
       <th>Name</th>
       <th>Type</th>
       <th>Gender</th>
+      <th>Enclosure ID</th>
     </tr>
   </thead>
   <tbody>
@@ -38,7 +39,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["animal_id"]?></td>
-    <td><a href="animal-section.php?id=<?=$row["animal_id"]?>"><?=$row["animalname"]?></a></td>
+    <td><?=$row["animalname"]?></td>
     <td><?=$row["animaltype"]?></td>
     <td><?=$row["animalgender"]?></td>
     <td><a href="enclosuretable.php?id=<?=$row["enclosure_id"]?>"><?=$row["enclosure_id"]?></a></td>
