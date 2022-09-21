@@ -12,6 +12,7 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Size (sq. ft.)</th>
     </tr>
   </thead>
   <tbody>
