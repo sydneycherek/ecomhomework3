@@ -27,7 +27,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT animal_id, animal_id from Animal";
+$sql = "SELECT animal_id, animalname, animaltype from Animal";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
