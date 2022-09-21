@@ -31,7 +31,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT animal_id, animalname, animaltype, enclosure_id, enclosuretype, enclosuresize from Animal a join Enclosure e on a.enclosure_id = e.enclosure_id";
+$sql = "SELECT animal_id, animalname, animaltype, enclosure_id, enclosuretype, enclosuresize FROM Animal a JOIN Enclosure e ON a.enclosure_id = e.enclosure_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
