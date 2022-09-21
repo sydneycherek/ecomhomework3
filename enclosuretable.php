@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["enclosure_id"]?></td>
-    <td><a href="enclosure-section.php?id=<?=$row["enclosure_id"]?>"><?=$row["enclosuretype"]?></a></td>
+    <td><?=$row["enclosuretype"]?></a></td>
     <td><?=$row["enclosuresize"]?></td>
   </tr>
 <?php
