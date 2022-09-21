@@ -10,7 +10,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Animal ID</th>
       <th>Animal Name</th>
       <th>Animal Type</th>
       <th>Enclosure ID</th>
@@ -31,7 +30,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT animal_id, animalname, animaltype, enclosure_id, enclosuretype, enclosuresize FROM Animal a JOIN Enclosure e ON a.enclosure_id = e.enclosure_id";
+$sql = "SELECT animalname, animaltype, enclosure_id, enclosuretype, enclosuresize FROM Animal a JOIN Enclosure e ON a.enclosure_id = e.enclosure_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -39,7 +38,6 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["animal_id"]?></td>
     <td><?=$row["animalname"]?></td>
     <td><?=$row["animaltype"]?></td>
     <td><?=$row["enclosure_id"]?></td>
