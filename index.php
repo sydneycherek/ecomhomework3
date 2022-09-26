@@ -30,7 +30,7 @@
           <a class="nav-link" href="employeetable.php">Employee Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="animal-enclosuretable.php">Join Table</a>
+          <a class="nav-link" href="secondcriteria2.php">Animal and Care recieved</a>
         </li>
       </ul>
     </div>
