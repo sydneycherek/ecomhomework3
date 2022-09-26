@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="secondcriteria2.php">Animal and Care recieved</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="animal-care.php">Filter by Post</a>
+        </li>
       </ul>
     </div>
   </div>
