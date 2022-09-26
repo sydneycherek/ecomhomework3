@@ -35,11 +35,11 @@ if ($result->num_rows > 0) {
       <p class="card-text"><ul>
 <?php
     $section_sql = "select c.servicetype from Care c join Animal a on c.animal_id = a.animal_id where c.animal_id =" . $row["animal_id"];
-                                        echo $section_sql;
+                                        //echo $section_sql;
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
-      echo "<li>" . $section_row["description"] . "</li>";
+      echo "<li>" . $section_row["servicetype"] . "</li>";
     }
 ?>
       </ul></p>
