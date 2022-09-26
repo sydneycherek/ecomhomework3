@@ -31,7 +31,7 @@
           <a class="nav-link" href="employeetable.php">Employee Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="animal-employeetable.php">Join Table</a>
+          <a class="nav-link" href="animal-enclosuretable.php">Join Table</a>
         </li>
       </ul>
     </div>
