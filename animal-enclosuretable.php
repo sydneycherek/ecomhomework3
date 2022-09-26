@@ -12,9 +12,8 @@
     <tr>
       <th>Animal Name</th>
       <th>Animal Type</th>
-      <th>Enclosure ID</th>
-      <th>Enclosure Type</th>
-      <th>Enclosure Size (Sq. Ft.)</th>
+      <th>Care ID</th>
+      <th>Service Type</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +29,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT animalname, animaltype, enclosure_id, enclosuretype, enclosuresize FROM Animal a JOIN Enclosure e ON a.enclosure_id = e.enclosure_id";
+$sql = "SELECT animalname, animaltype, care_id, servicetype FROM Animal a JOIN Care c ON a.animal_id = c.animal_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -40,9 +39,8 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["animalname"]?></td>
     <td><?=$row["animaltype"]?></td>
-    <td><?=$row["enclosure_id"]?></td>
-    <td><?=$row["enclosuretype"]?></td>
-    <td><?=$row["enclosuresize"]?></td>
+    <td><?=$row["care_id"]?></td>
+    <td><?=$row["servicetype"]?></td>
   </tr>
 <?php
   }
