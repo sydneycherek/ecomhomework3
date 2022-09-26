@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["animalname"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "select c.servicetype from Care c join Animal a on c.animal_id = a.animal_id where a.animal_id =" . $row["animal_id"];
+    $section_sql = "select c.servicetype from Care c join Animal a on c.animal_id = a.animal_id where c.animal_id =" . $row["animal_id"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
