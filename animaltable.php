@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["animalname"]?></td>
     <td><?=$row["animaltype"]?></td>
     <td><?=$row["animalgender"]?></td>
-    <td><a href="enclosuretable.php?id=<?=$row["enclosure_id"]?>"><?=$row["enclosure_id"]?></a></td>
+    <td><a href="enclosurefilterpage.php?id=<?=$row["enclosure_id"]?>"><?=$row["enclosure_id"]?></a></td>
   </tr>
 <?php
   }
