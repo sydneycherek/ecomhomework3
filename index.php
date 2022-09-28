@@ -40,11 +40,16 @@
   </div>
 </nav>
     
-    <form action="handlepost.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit">
-</form>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Animal ID</th>
+          <th> Animal Name</th>
+       </tr>
+      </thead>
+      <tbody>
+       <?php
+       
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
