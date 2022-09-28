@@ -38,8 +38,8 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["care_id"]?></td>
-    <td><a href="animaltable.php?id=<?=$row["animal_id"]?>"><?=$row["animal_id"]?></a></td>
-    <td><a href="employeetable.php?id=<?=$row["employee_id"]?>"><?=$row["employee_id"]?></a></td>
+    <td><?=$row["animal_id"]?></td>
+    <td><?=$row["employee_id"]?></td>
     <td><?=$row["servicetype"]?></td>
   </tr>
 <?php
