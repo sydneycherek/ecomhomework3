@@ -73,7 +73,7 @@ if ($result->num_rows > 0) {
     <td>
       <form method="post" action="postpage.php">
         <input type="hidden" name="id" value="<?=$row["animal_id"]?>" />
-        <input type="submit" value="Enclosure" />
+        <input type="submit" value="Care / Service Type" />
       </form>
     </td>
   </tr>
