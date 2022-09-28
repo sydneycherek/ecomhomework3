@@ -7,12 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Sections</h1>
+    <h1>Filtered Enclosure</h1>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Enclosure Name</th>
+      <th>Enclosure Type</th>
       <th>Size (sq. ft)</th>
     </tr>
   </thead>
@@ -31,7 +31,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select e.enclosure_id, enclosurename, enclosuresize FROM Animal a JOIN Enclosure e on a.enclosure_id = e.enclosure_id WHERE e.enclosure_id=" . $iid;
+$sql = "select e.enclosure_id, enclosuretype, enclosuresize FROM Animal a JOIN Enclosure e on a.enclosure_id = e.enclosure_id WHERE e.enclosure_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["enclosure_id"]?></td>
-    <td><?=$row["enclosurename"]?></td>
+    <td><?=$row["enclosuretype"]?></td>
     <td><?=$row["enclosuresize"]?></td>
   </tr>
 <?php
