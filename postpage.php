@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 //echo $iid;
-$sql = "select  animal_id, animalname, servicetype FROM Animal a JOIN Care c ON a.animal_id = c.animal_id WHERE c.animal_id = " . $cid;
+$sql = "select a.animal_id, animalname, servicetype FROM Animal a JOIN Care c ON a.animal_id = c.animal_id WHERE c.animal_id = " . $cid;
 //echo $sql;
     $result = $conn->query($sql);
 
